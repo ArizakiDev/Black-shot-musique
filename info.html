@@ -1,0 +1,131 @@
+<link rel="stylesheet" type="text/css" href="info.css">
+<script src="https://use.fontawesome.com/9d03eba9c5.js"></script>
+
+<div class="right">
+
+    <a class="button" href="#popup1">Discord</a>
+</div>
+
+<div id="popup1" class="overlay">
+    <a class="cancel" href="#"></a>
+    <div class="popup">
+        <p><img src="https://cdn.discordapp.com/attachments/820367515350728727/882202715944534066/girl.gif" alt="avatar" style="width:90px;height:90px;margin-right:10px;border-radius:50%;pointer-events: none;" /><img src="https://4.bp.blogspot.com/-7zcjlUKOyLc/WvPb8pTXX4I/AAAAAAAAA0k/DK7OU6n7QaUuCgi3r32bEV-ND0zPrr9RQCLcBGAs/s1600/on.png"
+                alt="online" style="width: 18px;height: 18px;margin-top: 65px;margin-left: -33px;border: 3px solid #35383d;border-radius: 100%;position: absolute;pointer-events: none;" />
+            <h2>Arizaki 『𝒜𝓏𝓊𝓀𝒾』
+                <h class="tag">#1004</h>
+                </br>
+                <div id="client_logos">
+                    <div class="tooltip"><img style="display: inline; margin: 0 5px;cursor: pointer;pointer-events: none;" title="" src="https://4.bp.blogspot.com/-1jDY5J02Tno/WvLQech35AI/AAAAAAAAAzo/E20a5AEw6xQ-MZ3_ogKAdVVUXWLmaVS3wCLcBGAs/s1600/disstaff.png" alt="" width="18"
+                            height="19" />
+                        <span class="tooltiptext">Discord Staff</span>
+                    </div>
+
+                    <div class="tooltip"><img style="display: inline; margin: 0 6px;cursor: pointer;pointer-events: none;" title="" src="https://2.bp.blogspot.com/-GTwqQ8AIJtU/WvLQen5p2DI/AAAAAAAAAzw/wLBAekFAINA4aYWNLi2I1FYSyL3uZuaJwCLcBGAs/s1600/hyp.png" alt="" width="21"
+                            height="21" />
+                        <span class="tooltiptext">Discord HypeSquad</span>
+                    </div>
+
+                    <div class="tooltip"><img style="display: inline; margin: 0 -12px;cursor: pointer;pointer-events: none;" title="" src="https://3.bp.blogspot.com/-uBJbMo2AiRM/WvLQehTiMDI/AAAAAAAAAzs/H9FWOtcy5oQmLhWIaKbmck6tY_oCqJstgCLcBGAs/s1600/bh.png" alt="" width="20"
+                            height="19" />
+                        <span class="tooltiptext">Discord Bug Hunter</span>
+                    </div>
+
+                    <div class="tooltip"><img style="display: inline; margin: 0 7px;cursor: pointer;pointer-events: none;" title="" src="https://1.bp.blogspot.com/-GegV9Ca-wSU/WvLQfeKTbbI/AAAAAAAAAz0/sTTtByBv1_0466-2YeWyQimdlqO0-PBugCLcBGAs/s1600/nitro.png" alt="" width="24"
+                            height="19" />
+                        <span class="tooltiptext">Abonner au nitro depuis le 27 juillet 2021</span>
+                    </div>
+
+                </div>
+            </h2>
+        </p>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <button class="discord">ID</button>
+            <hr class="fot">
+            </br>
+            <p class="fotnot">copier l'id et chercher sur discord</p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    let btn = document.querySelector('button');
+    let text = '820360564219707392';
+    let copy;
+
+    if (navigator.clipboard) {
+        copy = function() {
+            navigator.clipboard.writeText(text).catch(fallback);
+        };
+    } else {
+        let input = document.createElement('input');
+        input.value = text;
+        input.style.position = 'absolute';
+
+        copy = function() {
+            document.body.append(input);
+            input.select();
+
+            try {
+                let success = document.execCommand('copy');
+                if (!success) fallback();
+            } catch (e) {
+                fallback();
+            }
+
+            input.remove();
+        };
+    }
+
+    btn.addEventListener('click', copy);
+
+    function fallback() {
+        window.prompt('Copy:', text);
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="pic">
+                <img src="a_801348384cdcf41040236ff1565abd89.gif" alt="">
+            </div>
+            <div class="name">Arizaki</div>
+            <div class="desc">Développeur </div>
+            <div class="sm">
+                <a href="https://github.com/Oreki-ASTRAL" class="fab fa-github"></a>
+                <a href="https://www.youtube.com/channel/UCaz39IS8Zhy_Rd8ZPL7U00g" class="fab fa-youtube"></a>
+                <a href="https://discord.gg/Xc2YjGuChQ" class="fab fa-discord"></a>
+                <a href="https://google.com/404" class="fab fa-google"></a>
+            </div>
+            <a href="https://discord.gg/Xc2YjGuChQ" class="contact-btn">Serveur discord</a>
+        </div>
+        <div class="card-footer">
+            <div class="numbers">
+                <div class="item">
+                    <span>5</span> Projets
+                </div>
+                <div class="border"></div>
+                <div class="item">
+                    <span>5</span> Projet à venir
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
